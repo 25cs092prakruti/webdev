@@ -1,0 +1,229 @@
+/* ===========================
+   GENERAL
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#f5f5f5;
+    color:#333;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+h3{
+    background-color: #e1e5e9;
+}
+header{
+    background:#003366;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* ===========================
+   NAVIGATION (Flexbox)
+=========================== */
+
+nav{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    background:#0055aa;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    padding:15px;
+}
+
+nav a:hover{
+    background:#003366;
+}
+
+/* ===========================
+   MAIN
+=========================== */
+
+main{
+    padding:20px;
+}
+
+/* ===========================
+   HOME / ABOUT / EVENTS
+=========================== */
+
+.grid-container{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:20px;
+}
+
+.card{
+    background:white;
+    border:1px solid gray;
+    border-radius:8px;
+    padding:20px;
+    text-align:center;
+}
+
+/* ===========================
+   DASHBOARD
+=========================== */
+
+.dashboard{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:15px;
+}
+
+.dashboard-box{
+    background:white;
+    border:1px solid gray;
+    padding:20px;
+    text-align:center;
+    border-radius:8px;
+}
+
+/* ===========================
+   FORM PAGES
+(Login, Registration,
+Profile, Leave,
+Certificates, Fees)
+=========================== */
+
+form,
+fieldset{
+    background:white;
+    padding:20px;
+    border-radius:8px;
+    margin-bottom:20px;
+}
+
+legend{
+    font-weight:bold;
+}
+
+input,
+textarea,
+select{
+    width:100%;
+    padding:10px;
+    margin:8px 0;
+    border:1px solid gray;
+    border-radius:5px;
+}
+
+input[type="radio"],
+input[type="checkbox"],
+input[type="file"]{
+    width:auto;
+}
+
+input[type="submit"],
+input[type="reset"]{
+    background:#0055aa;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover{
+    background:#003366;
+}
+
+/* ===========================
+   TABLES
+(Courses, Result,
+Fees, Notifications)
+=========================== */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+}
+
+table,
+th,
+td{
+    border:1px solid gray;
+}
+
+th{
+    background:#0055aa;
+    color:white;
+}
+
+th,
+td{
+    padding:10px;
+    text-align:center;
+}
+
+/* ===========================
+   LINKS
+=========================== */
+
+a{
+    color:#003366;
+    text-decoration:none;
+}
+
+a:hover{
+    color:rgb(243, 238, 238);
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+    background:#003366;
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:20px;
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+=========================== */
+
+/* Tablet */
+
+@media screen and (min-width:768px){
+
+.grid-container{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.dashboard{
+    grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+/* Desktop */
+
+@media screen and (min-width:992px){
+
+.grid-container{
+    grid-template-columns:repeat(3,1fr);
+}
+
+.dashboard{
+    grid-template-columns:repeat(3,1fr);
+}
+
+}
