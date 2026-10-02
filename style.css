@@ -17,9 +17,7 @@ body{
 /* ===========================
    HEADER
 =========================== */
-h3{
-    background-color: #e1e5e9;
-}
+
 header{
     background:#003366;
     color:white;
@@ -60,38 +58,12 @@ main{
    HOME / ABOUT / EVENTS
 =========================== */
 
-.grid-container{
-    display:grid;
-    grid-template-columns:1fr;
-    gap:20px;
-}
 
-.card{
-    background:white;
-    border:1px solid gray;
-    border-radius:8px;
-    padding:20px;
-    text-align:center;
-}
+
 
 /* ===========================
    DASHBOARD
 =========================== */
-
-.dashboard{
-    display:grid;
-    grid-template-columns:1fr;
-    gap:15px;
-}
-
-.dashboard-box{
-    background:white;
-    border:1px solid gray;
-    padding:20px;
-    text-align:center;
-    border-radius:8px;
-}
-
 /* ===========================
    FORM PAGES
 (Login, Registration,
@@ -102,7 +74,9 @@ Certificates, Fees)
 form,
 fieldset{
     background:white;
-    padding:20px;
+    height: 50%;
+    width: 40%;
+    padding:20px #003366;
     border-radius:8px;
     margin-bottom:20px;
 }
@@ -117,7 +91,7 @@ select{
     width:100%;
     padding:10px;
     margin:8px 0;
-    border:1px solid gray;
+    border:1px solid #003366;
     border-radius:5px;
 }
 
@@ -157,12 +131,12 @@ table{
 table,
 th,
 td{
-    border:1px solid gray;
+    border:1px solid rgb(30, 42, 105);
 }
 
 th{
-    background:#0055aa;
-    color:white;
+    background:hsl(210, 100%, 20%);
+    
 }
 
 th,
@@ -176,7 +150,7 @@ td{
 =========================== */
 
 a{
-    color:#003366;
+    color:hsl(210, 100%, 20%);
     text-decoration:none;
 }
 
@@ -188,20 +162,39 @@ a:hover{
    FOOTER
 =========================== */
 
-footer{
+footer
+{
     background:#003366;
     color:white;
     text-align:center;
     padding:15px;
     margin-top:20px;
 }
+.dashboard-box{
+    background:white;
+    border:1px solid #003366;
+    padding:20px;
+    text-align:center;
+    border-radius:8px;
+}
+.card{
+    background:white;
+    border:1px solid ;
+    border-radius:8px;
+    padding:20px;
+    text-align:center;
+}
 
-/* ===========================
-   RESPONSIVE DESIGN
-=========================== */
-
-/* Tablet */
-
+.grid-container{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:20px;
+}
+.dashboard{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:15px;
+}
 @media screen and (min-width:768px){
 
 .grid-container{
@@ -213,13 +206,10 @@ footer{
 }
 
 }
-
-/* Desktop */
-
 @media screen and (min-width:992px){
 
 .grid-container{
-    grid-template-columns:repeat(3,1fr);
+    grid-template-columns:repeat(3,1fr); 
 }
 
 .dashboard{
