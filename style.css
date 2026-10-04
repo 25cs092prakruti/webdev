@@ -74,8 +74,6 @@ Certificates, Fees)
 form,
 fieldset{
     background:white;
-    height: 50%;
-    width: 40%;
     padding:20px #003366;
     border-radius:8px;
     margin-bottom:20px;
@@ -216,4 +214,325 @@ footer
     grid-template-columns:repeat(3,1fr);
 }
 
+}/* FAQ */
+.faq-question{
+    width:100%;
+    padding:15px;
+    background:#0055aa;
+    color:white;
+    border:none;
+    cursor:pointer;
+    display:flex;
+    justify-content:space-between;
+    font-size:16px;
+}
+
+.faq-answer{
+    display:none;
+    padding:15px;
+    background:#f5f5f5;
+}
+
+.faq-answer.show{
+    display:block;
+}
+/*modal*/
+.modal{
+    display:none;
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.5);
+    justify-content:center;
+    align-items:center;
+}
+
+.modal.show{
+    display:flex;
+}
+
+.modal-content{
+    background:white;
+    padding:20px;
+    border-radius:8px;
+    width:350px;
+    text-align:center;
+    position:relative;
+}
+
+.modal-close{
+    position:absolute;
+    top:10px;
+    right:15px;
+    font-size:25px;
+    cursor:pointer;
+}
+/* Slider */
+
+.slider{
+    width:80%;
+    margin:20px auto;
+    background:#0055aa;
+    color:white;
+    text-align:center;
+    padding:40px;
+    border-radius:10px;
+    position:relative;
+}
+
+.slide{
+    display:none;
+}
+
+.slide.active{
+    display:block;
+}
+
+#prev,
+#next{
+
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+
+    border:none;
+    background:white;
+    color:#003366;
+
+    padding:10px 15px;
+    cursor:pointer;
+    font-size:20px;
+    border-radius:50%;
+}
+
+#prev{
+    left:10px;
+}
+
+#next{
+    right:10px;
+}
+
+#prev:hover,
+#next:hover{
+    background:#ddd;
+}
+.header{
+    background:#003366;
+    color:white;
+    text-align:center;
+    padding:20px;
+    position:relative;
+}
+
+.theme-btn{
+    position:absolute;
+    top:20px;
+    right:20px;
+
+    background:white;
+    color:#003366;
+    border:none;
+    padding:10px 15px;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:15px;
+}
+
+.theme-btn:hover{
+    background:#e6e6e6;
+}
+/* Dark Theme */
+
+body.dark-mode{
+    background:#1e1e1e;
+    color:white;
+    transition:0.3s;
+}
+
+/* Header */
+body.dark-mode header{
+    background:#111827;
+    color:white;
+}
+
+/* Navigation */
+body.dark-mode nav{
+    background:#1f2937;
+}
+
+body.dark-mode nav a{
+    color:white;
+}
+
+body.dark-mode nav a:hover{
+    background:#374151;
+}
+
+/* Main */
+body.dark-mode main{
+    background:#1e1e1e;
+}
+
+/* Dashboard Cards */
+body.dark-mode .dashboard-box,
+body.dark-mode .card{
+    background:#2d3748;
+    color:white;
+    border:1px solid #555;
+}
+
+/* Forms */
+body.dark-mode form,
+body.dark-mode fieldset{
+    background:#2d3748;
+    color:white;
+}
+
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select{
+    background:#444;
+    color:white;
+    border:1px solid #777;
+}
+
+/* Tables */
+body.dark-mode table{
+    background:#2d3748;
+    color:white;
+}
+
+body.dark-mode th{
+    background:#111827;
+    color:white;
+}
+
+body.dark-mode td{
+    background:#2d3748;
+    color:white;
+}
+
+/* Links */
+body.dark-mode a{
+    color:#66b3ff;
+}
+
+/* Footer */
+body.dark-mode footer{
+    background:#111827;
+    color:white;
+}
+
+/* FAQ */
+body.dark-mode .faq-answer{
+    background:#2d3748;
+    color:white;
+}
+
+body.dark-mode .faq-question{
+    background:#1f2937;
+}
+
+/* Modal */
+body.dark-mode .modal-content{
+    background:#2d3748;
+    color:white;
+}
+
+/* Slider */
+body.dark-mode .slider{
+    background:#1f2937;
+}
+/* Header */
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#003366;
+    color:white;
+    padding:20px;
+}
+
+/* Hamburger Button */
+/* Header */
+.header{
+    display:grid;
+    grid-template-columns:60px 1fr auto;
+    align-items:center;
+    background:#003366;
+    color:white;
+    padding:20px;
+}
+
+.header h1{
+    text-align:center;
+    margin:0;
+}
+
+/* Buttons */
+.menu-btn,
+.theme-btn{
+    background:white;
+    border:none;
+    padding:8px 12px;
+    cursor:pointer;
+    border-radius:5px;
+}
+
+.menu-btn{
+    justify-self:start;
+}
+
+.theme-btn{
+    justify-self:end;
+}
+
+/* Navigation */
+#navMenu{
+    display:none;
+    flex-direction:column;
+    background:#0055aa;
+}
+
+#navMenu.show{
+    display:flex;
+}
+
+#navMenu a{
+    color:white;
+    padding:12px;
+    text-decoration:none;
+    border-bottom:1px solid white;
+}
+
+#navMenu a:hover{
+    background:#003366;
+}
+/* Notification Banner */
+
+.notification{
+    background:#ffeb3b;
+    color:black;
+    padding:15px;
+    text-align:center;
+    font-weight:bold;
+    position:relative;
+}
+
+.notification button{
+    position:absolute;
+    right:15px;
+    top:10px;
+    border:none;
+    background:none;
+    font-size:20px;
+    cursor:pointer;
+}
+body.dark-mode .notification{
+    background:#444;
+    color:white;
 }

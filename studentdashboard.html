@@ -6,8 +6,8 @@
 <title>Student Dashboard</title>
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
-
 <link rel="stylesheet" href="style.css">
+
 
 <style>
 .dashboard{
@@ -25,15 +25,44 @@
 </head>
 
 <body>
+<header class="header">
 
-<header>
+    <h1>Student Dashboard</h1>
 
-<h1>Student Dashboard</h1>
+    
+    <button id="themeBtn" class="theme-btn">🌙 Dark Mode</button>
 
 </header>
 
+  <div id="notification" class="notification">
+    📢 AI Seminar Today at 10:00 AM in Seminar Hall.
+    <button id="closeNotification">&times;</button>
+</div>
 
+<!-- Slider -->
 
+<section class="slider">
+
+    <div class="slide active">
+        <h2>Welcome to Student Hub Portal</h2>
+        <p>Manage your courses, fees and results.</p>
+    </div>
+
+    <div class="slide">
+        <h2>AI Seminar</h2>
+        <p>Join the AI Seminar at 10:00 AM in Seminar Hall.</p>
+    </div>
+
+    <div class="slide">
+        <h2>Scholarship Notice</h2>
+        <p>Scholarship applications are now open.</p>
+    </div>
+
+    <button id="prev">❮</button>
+    <button id="next">❯</button>
+
+</section>
+ 
 <main>
 
 <div class="dashboard">
@@ -87,15 +116,36 @@
 </div>
 
 </div>
-
+<br><br>
+ 
 </main>
+ 
 
+<div id="studentModal" class="modal">
+
+    <div class="modal-content">
+
+        <span id="closeModal" class="modal-close">&times;</span>
+
+        <h2>Student Details</h2>
+
+        <p><strong>Name:</strong> Prakruti Saradva</p>
+
+        <p><strong>Student ID:</strong> 25CS092</p>
+
+        <p><strong>Department:</strong> Computer Science</p>
+
+        <p><strong>Email:</strong> 25CS092@studenthub.com</p>
+
+    </div>
+
+</div>
 <footer>
 
 <p>© 2026 Student Hub Portal</p>
 
 </footer>
-
+ <script src="script.js"></script>
 </body>
 
 </html>

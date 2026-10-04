@@ -10,22 +10,31 @@
 
 <header>
     <center>
-        <h1>WELCOME TO STUDENT HUB PORTAL!</h1>
+        <h1>LOGIN HERE</h1>
     </center>
+     <button id="themeBtn" class="theme-btn">
+        🌙 Dark Mode
+    </button>
 </header>
 <main>
 <section>
 <center>
     <br><br>
+    <style>
+        fieldset,form{
+            height: 30%;
+            width: 40%;
+        }
+    </style>
     <fieldset>
-        <h2>LOGIN PAGE</h2>
-        <form action="studentdashboard.html" height="10" width="10" >
-
+       <br>
+        <form action="studentdashboard.html" >
+              
             <label>Enter Student ID / E-mail</label><br>
 
             <input type="text" name="studentid">
 
-            <br><br><br>
+            <br><br>
 
             <label>Enter Password</label><br>
 
@@ -34,7 +43,7 @@
             <br><br>
 
             <input type="checkbox" > Remember Me
-            <br><br><br>
+            <br><br>
             <input type="submit" value="Login">
         </form>
     </fieldset>
@@ -46,5 +55,6 @@
         <p>Student Hub Portal</p>
     </center>
 </footer>
+ <script src="script.js"></script>
 </body>
 </html>
