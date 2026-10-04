@@ -18,7 +18,7 @@
 </header>
 <main>
 <section>
-<form>
+<form id="profileForm" novalidate>
 <table width="100%" cellpadding="10">
 <tr>
 <td width="70%" valign="top">
@@ -27,24 +27,95 @@
 <table cellpadding="8">
 <tr>
 <td><b>Student Name</b></td>
-<td><input type="text" placeholder="Enter your name"></td>
+<td><input type="text" id ="name" placeholder="Enter your name" required></td>
+<br>
+<span id="nameError" class="error"></span>
 </tr>
+
 <tr>
 <td><b>Enrollment ID</b></td>
-<td><input type="text" placeholder="Enter Enrollment ID"></td>
+<td><input type="text" id="enrollment" placeholder="Enter Enrollment ID"></td>
+<br>
+<span id="enrollmentError" class="error"></span>
 </tr>
 <tr>
 <td><b>Email</b></td>
 <td><input type="email" placeholder="Enter Email"></td>
+<br>
+<span id="emailError" class="error"></span>
+</tr>
+
+<td><label for="age"><b>Age</b></label></td>
+<td>
+<input type="number" id="age" min="16" max="35" placeholder="Enter your age" required>
+<br>
+<span id="ageError" class="error"></span>
+</td>
+</tr>
+
+<tr>
+<td><b>Gender</b></td>
+<td>
+
+<input type="radio" id="male" name="gender" value="Male">
+<label for="male">Male</label>
+
+<input type="radio" id="female" name="gender" value="Female">
+<label for="female">Female</label>
+
+<input type="radio" id="other" name="gender" value="Other">
+<label for="other">Other</label>
+
+<br>
+<span id="genderError" class="error"></span>
+
+</td>
+</tr>
+
+<tr>
+<td><label for="photo"><b>Student Photo</b></label></td>
+<td>
+<input type="file" id="photo" accept="image/*">
+<br>
+<span id="photoError" class="error"></span>
+</td>
+</tr>
+
+<tr>
+<td><label for="password"><b>Password</b></label></td>
+<td>
+<input
+type="password"
+id="password"
+placeholder="Enter Password"
+required>
+<br>
+<small id="passwordStrength"></small>
+<br>
+<span id="passwordError" class="error"></span>
+</td>
 </tr>
 <tr>
+<td><label for="confirmPassword"><b>Change Password</b></label></td>
+<td>
+<input
+type="password"
+id="confirmPassword"
+placeholder="Re-enter Password"
+required>
+<br>
+<span id="confirmPasswordError" class="error"></span>
+</td>
+</tr>
 <td><b>Phone Number</b></td>
-<td><input type="tel" placeholder="Enter Phone Number"></td>
+<td><input type="tel" id="phone" placeholder="Enter Phone Number"></td>
+<br>
+<span id="phoneError" class="error"></span>
 </tr>
 <tr>
 <td><b>Subject</b></td>
 <td>
-<select>
+<select id="subject">
 <option>Select Subject</option>
 <option>Technical Issue</option>
 <option>Admission</option>
@@ -52,32 +123,21 @@
 <option>Course</option>
 <option>Other</option>
 </select>
+<span id="subjectError" class="error"></span>
 </td>
 </tr>
 <tr>
 <td><b>Message</b></td>
 <td>
-<textarea rows="5" placeholder="Write your message here..."></textarea>
+<textarea rows="5"id="message" placeholder="Write your message here..."></textarea>
+<br>
+<span id="messageError" class="error"></span>
 </td>
 </tr>
 </table>
 </fieldset>
 </td>
-<td width="30%" valign="top">
-<fieldset>
-<legend><b>COLLEGE CONTACT</b></legend>
-<p><b>Student Hub Portal</b></p>
-<p>Email:<br>
-studenthub@gmail.com</p>
-<p>Phone:<br>
-+91 9876543210</p>
-<p>Address:<br>
-ABC College,<br>
-Ahmedabad,<br>
-Gujarat, India</p>
-</fieldset>
-</td>
-</tr>
+
 </table>
 <br>
 <center>

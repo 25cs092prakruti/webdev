@@ -536,3 +536,28 @@ body.dark-mode .notification{
     background:#444;
     color:white;
 }
+.error{
+    color:#d93025;
+    font-size:13px;
+    margin-top:4px;
+    display:block;
+}
+
+.error-input{
+    border:2px solid #d93025 !important;
+}
+
+input,
+select,
+textarea{
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:4px;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+    outline:none;
+    border:2px solid #1a73e8;
+}
