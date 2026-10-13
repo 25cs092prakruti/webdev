@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+
 
     /* ===========================
        FAQ
@@ -6,9 +6,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const questions = document.querySelectorAll(".faq-question");
 
-    questions.forEach(function(question){
+    questions.forEach(function (question) {
 
-        question.addEventListener("click", function(){
+        question.addEventListener("click", function () {
 
             const answer = question.nextElementSibling;
 
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             const symbol = question.querySelector("span");
 
-            if(symbol){
+            if (symbol) {
                 symbol.textContent = answer.classList.contains("show") ? "−" : "+";
             }
 
@@ -33,26 +33,20 @@ document.addEventListener("DOMContentLoaded", function () {
     const closeModal = document.getElementById("closeModal");
     const studentModal = document.getElementById("studentModal");
 
-    if(openModal && closeModal && studentModal){
+    if (openModal && closeModal && studentModal) {
 
-        openModal.addEventListener("click", function(){
-
+        openModal.addEventListener("click", function () {
             studentModal.classList.add("show");
-
         });
 
-        closeModal.addEventListener("click", function(){
-
+        closeModal.addEventListener("click", function () {
             studentModal.classList.remove("show");
-
         });
 
-        window.addEventListener("click", function(event){
+        window.addEventListener("click", function (event) {
 
-            if(event.target === studentModal){
-
+            if (event.target === studentModal) {
                 studentModal.classList.remove("show");
-
             }
 
         });
@@ -68,16 +62,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const next = document.getElementById("next");
     const prev = document.getElementById("prev");
 
-    if(slides.length > 0 && next && prev){
+    if (slides.length > 0 && next && prev) {
 
         let current = 0;
 
-        function showSlide(index){
+        function showSlide(index) {
 
-            slides.forEach(function(slide){
-
+            slides.forEach(function (slide) {
                 slide.classList.remove("active");
-
             });
 
             slides[index].classList.add("active");
@@ -86,28 +78,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
         showSlide(current);
 
-        next.addEventListener("click", function(){
+        next.addEventListener("click", function () {
 
             current++;
 
-            if(current >= slides.length){
-
+            if (current >= slides.length) {
                 current = 0;
-
             }
 
             showSlide(current);
 
         });
 
-        prev.addEventListener("click", function(){
+        prev.addEventListener("click", function () {
 
             current--;
 
-            if(current < 0){
-
+            if (current < 0) {
                 current = slides.length - 1;
-
             }
 
             showSlide(current);
@@ -120,34 +108,34 @@ document.addEventListener("DOMContentLoaded", function () {
     /* ===========================
        DARK MODE
     =========================== */
+    document.addEventListener("DOMContentLoaded", function () {
 
     const themeBtn = document.getElementById("themeBtn");
 
-    if(localStorage.getItem("theme") === "dark"){
+    if (localStorage.getItem("theme") === "dark") {
 
         document.body.classList.add("dark-mode");
 
-        if(themeBtn){
+        if (themeBtn) {
             themeBtn.textContent = "☀ Light Mode";
         }
 
     }
 
-    if(themeBtn){
+    if (themeBtn) {
 
-        themeBtn.addEventListener("click", function(){
+        themeBtn.addEventListener("click", function () {
 
             document.body.classList.toggle("dark-mode");
 
-            if(document.body.classList.contains("dark-mode")){
+            if (document.body.classList.contains("dark-mode")) {
 
-                localStorage.setItem("theme","dark");
+                localStorage.setItem("theme", "dark");
                 themeBtn.textContent = "☀ Light Mode";
 
-            }
-            else{
+            } else {
 
-                localStorage.setItem("theme","light");
+                localStorage.setItem("theme", "light");
                 themeBtn.textContent = "🌙 Dark Mode";
 
             }
@@ -156,7 +144,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
 
-
+    });
     /* ===========================
        HAMBURGER MENU
     =========================== */
@@ -164,200 +152,188 @@ document.addEventListener("DOMContentLoaded", function () {
     const menuBtn = document.getElementById("menuBtn");
     const navMenu = document.getElementById("navMenu");
 
-    if(menuBtn && navMenu){
+    if (menuBtn && navMenu) {
 
-        menuBtn.addEventListener("click", function(){
-
+        menuBtn.addEventListener("click", function () {
             navMenu.classList.toggle("show");
-
         });
 
     }
 
-});
-/* Notification Banner */
 
-const closeNotification = document.getElementById("closeNotification");
-const notification = document.getElementById("notification");
+    /* ===========================
+       NOTIFICATION
+    =========================== */
 
-if(closeNotification && notification){
+    const closeNotification = document.getElementById("closeNotification");
+    const notification = document.getElementById("notification");
 
-    closeNotification.addEventListener("click", function(){
+    if (closeNotification && notification) {
 
-        notification.style.display = "none";
+        closeNotification.addEventListener("click", function () {
+            notification.style.display = "none";
+        });
 
-    });
+    }
 
-}
+
+    /* ===========================
+       PROFILE / REGISTRATION FORM
+    =========================== */
+
+
 const form = document.getElementById("profileForm");
 
 if (form) {
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
 
-form.addEventListener("submit", function(e){
+        let isValid = true;
 
-e.preventDefault();
-document.querySelectorAll(".error-input").forEach(function(field){
-    field.classList.remove("error-input");
-});
+        // Get form fields
+        const name = document.getElementById("name");
+        const enrollment = document.getElementById("enrollment");
+        const email = document.getElementById("email");
+        const age = document.getElementById("age");
+        const phone = document.getElementById("phone");
+        const password = document.getElementById("password");
+        const confirmPassword = document.getElementById("confirmPassword");
+        const course = document.getElementById("course");
+        const year = document.getElementById("year");
+        const photo = document.getElementById("photo");
+        const subject = document.getElementById("subject");
+        const terms = document.getElementById("terms");
 
-let valid = true;
+        // Error elements
+        const nameError = document.getElementById("nameError");
+        const enrollmentError = document.getElementById("enrollmentError");
+        const emailError = document.getElementById("emailError");
+        const ageError = document.getElementById("ageError");
+        const phoneError = document.getElementById("phoneError");
+        const passwordError = document.getElementById("passwordError");
+        const confirmError = document.getElementById("confirmPasswordError");
+        const courseError = document.getElementById("courseError");
+        const yearError = document.getElementById("yearError");
+        const photoError = document.getElementById("photoError");
+        const genderError = document.getElementById("genderError");
+        const subjectError = document.getElementById("subjectError");
+        const termsError = document.getElementById("termsError");
 
-document.getElementById("nameError").innerHTML = "";
-document.getElementById("enrollmentError").innerHTML = "";
-document.getElementById("emailError").innerHTML = "";
-document.getElementById("phoneError").innerHTML = "";
-document.getElementById("ageError").innerHTML = "";
-document.getElementById("genderError").innerHTML = "";
-document.getElementById("photoError").innerHTML = "";
-document.getElementById("passwordError").innerHTML = "";
-document.getElementById("confirmPasswordError").innerHTML = "";
-document.getElementById("subjectError").innerHTML = "";
-document.getElementById("messageError").innerHTML = "";
+        // Clear previous errors
+        const errors = [
+            nameError, enrollmentError, emailError, ageError,
+            phoneError, passwordError, confirmError, courseError,
+            yearError, photoError, genderError, subjectError, termsError
+        ];
 
-let name = document.getElementById("name").value.trim();
-let enrollment = document.getElementById("enrollment").value.trim();
-let email = document.getElementById("email").value.trim();
-let phone = document.getElementById("phone").value.trim();
-let age = document.getElementById("age").value;
-let photo = document.getElementById("photo").value;
-let password = document.getElementById("password").value;
-let confirmPassword = document.getElementById("confirmPassword").value;
-let subject = document.getElementById("subject").value;
-let message = document.getElementById("message").value.trim();
+        errors.forEach(error => {
+            if (error) {
+                error.textContent = "";
+                error.style.display = "none";
+            }
+        });
 
-let gender = document.querySelector('input[name="gender"]:checked');
+        // 1. Name validation
+        if (name && !/^[A-Za-z ]{3,30}$/.test(name.value.trim())) {
+            showError(nameError, "Enter a valid name (3–30 letters).");
+            isValid = false;
+        }
 
-let nameRegex = /^[A-Za-z ]{3,30}$/;
-let enrollmentRegex = /^[0-9]{2}[A-Za-z]{2}[0-9]{3}$/;
-let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-let phoneRegex = /^[6-9][0-9]{9}$/;
-let passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*]).{8,}$/;
+        // 2. Enrollment ID validation
+        if (enrollment && !/^[0-9]{2}[A-Za-z]{2}[0-9]{3}$/.test(enrollment.value.trim())) {
+            showError(enrollmentError, "Enter a valid Enrollment ID, e.g. 25CS092.");
+            isValid = false;
+        }
 
-if(!nameRegex.test(name)){
-document.getElementById("nameError").innerHTML="Enter a valid name.";
-document.getElementById("name").classList.add("error-input");
-valid=false;
+        // 3. Email validation
+        if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) {
+            showError(emailError, "Enter a valid email address.");
+            isValid = false;
+        }
+
+        // 4. Age validation
+        if (age && (age.value === "" || age.value < 16 || age.value > 35)) {
+            showError(ageError, "Age must be between 16 and 35.");
+            isValid = false;
+        }
+
+        // 5. Phone validation
+        if (phone && !/^[6-9][0-9]{9}$/.test(phone.value.trim())) {
+            showError(phoneError, "Enter a valid 10-digit mobile number.");
+            isValid = false;
+        }
+
+        // 6. Password validation
+        const passwordPattern =
+            /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*]).{8,}$/;
+
+        if (password && !passwordPattern.test(password.value)) {
+            showError(
+                passwordError,
+                "Password needs 8 characters, uppercase, lowercase, a number and a special character."
+            );
+            isValid = false;
+        }
+
+        // 7. Confirm password validation
+        if (confirmPassword && password &&
+            confirmPassword.value !== password.value) {
+            showError(confirmError, "Passwords do not match.");
+            isValid = false;
+        }
+
+        // 8. Gender validation
+        const gender = document.querySelector('input[name="gender"]:checked');
+
+        if (!gender) {
+            showError(genderError, "Please select your gender.");
+            isValid = false;
+        }
+
+        // 9. Photo validation
+        if (photo && photo.files.length === 0) {
+            showError(photoError, "Please upload your student photo.");
+            isValid = false;
+        }
+
+        // 10. Course validation
+        if (course && course.value === "") {
+            showError(courseError, "Please select your course.");
+            isValid = false;
+        }
+
+        // 11. Year validation
+        if (year && year.value === "") {
+            showError(yearError, "Please select your year.");
+            isValid = false;
+        }
+
+        // 12. Subject validation
+        if (subject && subject.value === "") {
+            showError(subjectError, "Please select a subject.");
+            isValid = false;
+        }
+
+       
+
+        // 14. Terms validation
+        if (terms && !terms.checked) {
+            showError(termsError, "Please accept the Terms and Conditions.");
+            isValid = false;
+        }
+
+        // Display result
+        if (isValid) {
+            alert("Registration completed successfully!");
+            form.reset();
+        }
+    });
 }
 
-if(!enrollmentRegex.test(enrollment)){
-document.getElementById("enrollmentError").innerHTML="Example: 25CS092";
-document.getElementById("enrollment").classList.add("error-input");
-valid=false;
-}
-
-if(!emailRegex.test(email)){
-document.getElementById("emailError").innerHTML="Enter a valid email.";
-document.getElementById("email").classList.add("error-input");
-valid=false;
-}
-
-if(!phoneRegex.test(phone)){
-document.getElementById("phoneError").innerHTML="Enter a valid mobile number.";
-document.getElementById("phone").classList.add("error-input");
-valid=false;
-}
-
-if(age < 16 || age > 35){
-document.getElementById("ageError").innerHTML="Age must be between 16 and 35.";
-document.getElementById("age").classList.add("error-input");
-valid=false;
-}
-
-if(!gender){
-document.getElementById("genderError").innerHTML="Select your gender.";
-valid=false;
-}
-
-if(photo==""){
-document.getElementById("photoError").innerHTML="Upload your photo.";
-document.getElementById("photo").classList.add("error-input");
-valid=false;
-}
-
-if(!passwordRegex.test(password)){
-document.getElementById("passwordError").innerHTML="Password must contain uppercase, lowercase, number and special character.";
-document.getElementById("password").classList.add("error-input");
-valid=false;
-}
-
-if(password!=confirmPassword){
-document.getElementById("confirmPasswordError").innerHTML="Passwords do not match.";
-document.getElementById("confirmPassword").classList.add("error-input");
-valid=false;
-}
-
-if(subject=="Select Subject"){
-document.getElementById("subjectError").innerHTML="Select a subject.";
-document.getElementById("subject").classList.add("error-input");
-valid=false;
-}
-
-if(message.length<10){
-document.getElementById("messageError").innerHTML="Message must contain at least 10 characters.";
-valid=false;
-}
-
-if(valid){
-alert("Profile Updated Successfully!");
-form.reset();
-document.getElementById("passwordStrength").innerHTML="";
-}
-
-});
-
-
-
-const passwordBox = document.getElementById("password");
-
-if(passwordBox){
-
-passwordBox.addEventListener("keyup",function(){
-
-let value=passwordBox.value;
-let strength=document.getElementById("passwordStrength");
-
-if(value.length<6){
-
-strength.innerHTML="Weak";
-strength.style.color="red";
-
-}
-else if(
-value.match(/[A-Z]/) &&
-value.match(/[a-z]/) &&
-value.match(/[0-9]/) &&
-value.match(/[!@#$%^&*]/)
-){
-
-strength.innerHTML="Strong";
-strength.style.color="green";
-
-}
-else{
-
-strength.innerHTML="Medium";
-strength.style.color="orange";
-
-}
-
-});
-
-}
-document.querySelectorAll("input,select,textarea").forEach(function(field){
-
-field.addEventListener("input",function(){
-
-this.classList.remove("error-input");
-
-let error=document.getElementById(this.id+"Error");
-
-if(error){
-
-error.innerHTML="";
-
-}
-
-});
-
-});
+// Display error message
+function showError(element, message) {
+    if (element) {
+        element.textContent = message;
+        element.style.display = "block";
+    }
 }

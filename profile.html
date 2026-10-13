@@ -27,24 +27,26 @@
 <table cellpadding="8">
 <tr>
 <td><b>Student Name</b></td>
-<td><input type="text" id ="name" placeholder="Enter your name" required></td>
+<td><input type="text" id ="name" placeholder="Enter your name" required>
 <br>
 <span id="nameError" class="error"></span>
+</td>
 </tr>
-
 <tr>
 <td><b>Enrollment ID</b></td>
-<td><input type="text" id="enrollment" placeholder="Enter Enrollment ID"></td>
+<td><input type="text" id="enrollment" placeholder="Enter Enrollment ID">
 <br>
 <span id="enrollmentError" class="error"></span>
+</td>
 </tr>
 <tr>
 <td><b>Email</b></td>
-<td><input type="email" placeholder="Enter Email"></td>
+<td><input type="email" id="email" placeholder="Enter Email">
 <br>
 <span id="emailError" class="error"></span>
+</td>
 </tr>
-
+<tr>
 <td><label for="age"><b>Age</b></label></td>
 <td>
 <input type="number" id="age" min="16" max="35" placeholder="Enter your age" required>
@@ -52,7 +54,6 @@
 <span id="ageError" class="error"></span>
 </td>
 </tr>
-
 <tr>
 <td><b>Gender</b></td>
 <td>
@@ -80,7 +81,35 @@
 <span id="photoError" class="error"></span>
 </td>
 </tr>
-
+<tr>
+<td><label for="course"><b>Course</b></label></td>
+<td>
+<select id="course">
+<option value="">Select Course</option>
+<option>B.Tech IT</option>
+<option>B.Tech CE</option>
+<option>B.Tech CSE</option>
+<option>BCA</option>
+<option>MCA</option>
+</select>
+<br>
+<span id="courseError" class="error"></span>
+</td>
+</tr>
+<tr>
+<td><label for="year"><b>Year</b></label></td>
+<td>
+<select id="year">
+<option value="">Select Year</option>
+<option>1st Year</option>
+<option>2nd Year</option>
+<option>3rd Year</option>
+<option>4th Year</option>
+</select>
+<br>
+<span id="yearError" class="error"></span>
+</td>
+</tr>
 <tr>
 <td><label for="password"><b>Password</b></label></td>
 <td>
@@ -107,16 +136,18 @@ required>
 <span id="confirmPasswordError" class="error"></span>
 </td>
 </tr>
+<tr>
 <td><b>Phone Number</b></td>
-<td><input type="tel" id="phone" placeholder="Enter Phone Number"></td>
+<td><input type="tel" id="phone" placeholder="Enter Phone Number">
 <br>
 <span id="phoneError" class="error"></span>
+</td>
 </tr>
 <tr>
 <td><b>Subject</b></td>
 <td>
 <select id="subject">
-<option>Select Subject</option>
+<option value="">Select Subject</option>
 <option>Technical Issue</option>
 <option>Admission</option>
 <option>Fees</option>
@@ -137,11 +168,18 @@ required>
 </table>
 </fieldset>
 </td>
-
+<tr>
+<td colspan="2">
+<input type="checkbox" id="terms">
+<label for="terms">I agree to the Terms and Conditions</label>
+<br>
+<span id="termsError" class="error"></span>
+</td>
+</tr>
 </table>
 <br>
 <center>
-<input type="submit" value="Send Message">
+<input type="submit" value="Register">
 <input type="reset" value="Clear">
 </center>
 </form>
