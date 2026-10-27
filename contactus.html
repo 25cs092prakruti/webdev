@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,6 +36,40 @@
 
     <!-- Contact Us Content -->
 
+
+    
+<form action="contact.php" method="POST" id="contactForm">
+    <label for="contactName">Name</label>
+    <input type="text" id="contactName" name="name" required>
+
+    <label for="contactId">Student ID</label>
+    <input type="text" id="contactId" name="student_id" required>
+
+    <label for="contactEmail">Email</label>
+    <input type="email" id="contactEmail" name="email" required>
+
+    <label for="contactSubject">Subject</label>
+    <input type="text" id="contactSubject" name="subject" required>
+
+    <label for="contactMessage">Message</label>
+    <textarea id="contactMessage" name="message" rows="5" required></textarea>
+
+    <button type="submit">Submit Inquiry</button>
+</form>
+
+<p id="formStatus" role="status"></p>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const status = params.get("status");
+const statusElement = document.getElementById("formStatus");
+
+if (status === "success") {
+    statusElement.textContent = "Your inquiry was submitted successfully.";
+} else if (status === "error") {
+    statusElement.textContent = "Please check your details and try again.";
+}
+</script>
    <section class="panel">
         <h2>Frequently Asked Questions</h2>
 

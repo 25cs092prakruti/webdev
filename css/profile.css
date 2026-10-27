@@ -316,3 +316,139 @@ body.dark-mode .record strong {
         grid-column: auto;
     }
 }
+.success-message {
+    color: #166534;
+    background: #dcfce7;
+    padding: 12px;
+    border-radius: 6px;
+}
+
+.error-message {
+    color: #b91c1c;
+    margin: 5px 0 12px;
+    font-size: 14px;
+}
+
+main.panel form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+main.panel form input,
+main.panel form textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Contact Inquiry Form */
+.contact-panel {
+    max-width: 650px;
+    margin: 30px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e5e7eb;
+}
+
+.contact-panel h2 {
+    text-align: center;
+    color: #1e3a8a;
+    margin-bottom: 10px;
+}
+
+.contact-panel p {
+    color: #64748b;
+    line-height: 1.6;
+}
+
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#contactForm label {
+    color: #1f2937;
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+#contactForm input,
+#contactForm textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+    background: #f8fafc;
+    color: #111827;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#contactForm input:focus,
+#contactForm textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+    background: #ffffff;
+}
+
+#contactForm textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+#contactForm button {
+    margin-top: 15px;
+    padding: 13px 18px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+#contactForm button:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+#contactForm button:focus-visible {
+    outline: 3px solid #93c5fd;
+    outline-offset: 3px;
+}
+
+/* Success and error messages */
+#formStatus {
+    margin-top: 15px;
+    font-weight: 600;
+    text-align: center;
+}
+
+#formStatus:empty {
+    display: none;
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+    .contact-panel {
+        margin: 20px 12px;
+        padding: 20px;
+    }
+
+    #contactForm input,
+    #contactForm textarea {
+        font-size: 16px;
+    }
+}

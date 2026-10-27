@@ -1,0 +1,2 @@
+$saved = fputcsv($file, $safeValues, ",", '"', "");
+"Prakruti Saradva",25cs092,prakrutisaradva@gmail.com,technical,"why is wifi is not working?","2026-10-27 14:08:06"
