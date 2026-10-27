@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Contact Us</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/profile.css">
     
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
    
@@ -27,32 +28,39 @@
 <br>
 <br>
 
-<section class="faq-section">
-
-   
-
-    <div class="faq-item">
-
-        <button class="faq-question">
-            How can I contact Student Hub?
-            <span>+</span>
-        </button>
-
-        <div class="faq-answer">
-            <p>
-                You can contact us by email at<br>
-                support@studenthub.com or call<br>
-                +91 9876543210.
-            </p>
-        </div>
-
-    </div>
-
-</section>
 
 <footer>
     <p>Student Hub Portal</p>
 </footer>
+
+    <!-- Contact Us Content -->
+
+   <section class="panel">
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="controls">
+            <input id="faqs-search" type="search"
+                   placeholder="Search questions" aria-label="Search FAQs">
+
+            <select id="faqs-filter" aria-label="Filter by FAQ category">
+                <option value="">All Categories</option>
+            </select>
+
+            <select id="faqs-sort" aria-label="Sort questions">
+                <option value="question-asc">Question: A to Z</option>
+                <option value="question-desc">Question: Z to A</option>
+            </select>
+        </div>
+
+        <p id="faqs-count"></p>
+        <p id="faqs-message" class="message" aria-live="polite">
+            Loading FAQs...
+        </p>
+        <div id="faqs-list" class="record-list"></div>
+        <div id="faqs-pagination" class="pagination"></div>
+    </section>
+
+    <script type="module" src="js/profile.js"></script>
  <script src="script.js"></script>
 </body>
 

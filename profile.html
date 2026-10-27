@@ -1,196 +1,254 @@
+
+
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Contact Us</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile | StudentHub</title>
+
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/profile.css">
 </head>
+
 <body>
-<header>
-<p>
-<a href="studentdashboard.html">Back to Student Dashboard</a>
-</p>
-<center>
-<h1>STUDENT PROFILE</h1>
-</center>
-<button id="themeBtn" class="theme-btn">
-        🌙 Dark Mode
-    </button>
+
+<header class="profile-header">
+    <div class="header-top">
+        <a href="studentdashboard.html" class="back-link">
+            &#8592; Back to Student Dashboard
+        </a>
+
+        <button type="button" id="themeBtn" class="theme-btn">
+            🌙 Dark Mode
+        </button>
+    </div>
+
+    <div class="header-title">
+        <h1>STUDENT PROFILE</h1>
+        <p>Manage your student information and explore the directory.</p>
+    </div>
 </header>
-<main>
-<section>
-<form id="profileForm" novalidate>
-<table width="100%" cellpadding="10">
-<tr>
-<td width="70%" valign="top">
-<fieldset>
-<legend><b>CONTACT INFORMATION</b></legend>
-<table cellpadding="8">
-<tr>
-<td><b>Student Name</b></td>
-<td><input type="text" id ="name" placeholder="Enter your name" required>
-<br>
-<span id="nameError" class="error"></span>
-</td>
-</tr>
-<tr>
-<td><b>Enrollment ID</b></td>
-<td><input type="text" id="enrollment" placeholder="Enter Enrollment ID">
-<br>
-<span id="enrollmentError" class="error"></span>
-</td>
-</tr>
-<tr>
-<td><b>Email</b></td>
-<td><input type="email" id="email" placeholder="Enter Email">
-<br>
-<span id="emailError" class="error"></span>
-</td>
-</tr>
-<tr>
-<td><label for="age"><b>Age</b></label></td>
-<td>
-<input type="number" id="age" min="16" max="35" placeholder="Enter your age" required>
-<br>
-<span id="ageError" class="error"></span>
-</td>
-</tr>
-<tr>
-<td><b>Gender</b></td>
-<td>
 
-<input type="radio" id="male" name="gender" value="Male">
-<label for="male">Male</label>
+<main class="profile-container">
 
-<input type="radio" id="female" name="gender" value="Female">
-<label for="female">Female</label>
+    <section class="profile-card" aria-labelledby="contactHeading">
+        <div class="section-heading">
+            <h2 id="contactHeading">Contact Information</h2>
+            <p>Enter your details in the form below.</p>
+        </div>
 
-<input type="radio" id="other" name="gender" value="Other">
-<label for="other">Other</label>
+        <form id="profileForm" novalidate>
 
-<br>
-<span id="genderError" class="error"></span>
+            <fieldset>
+                <legend>Personal Information</legend>
 
-</td>
-</tr>
+                <div class="form-grid">
 
-<tr>
-<td><label for="photo"><b>Student Photo</b></label></td>
-<td>
-<input type="file" id="photo" accept="image/*">
-<br>
-<span id="photoError" class="error"></span>
-</td>
-</tr>
-<tr>
-<td><label for="course"><b>Course</b></label></td>
-<td>
-<select id="course">
-<option value="">Select Course</option>
-<option>B.Tech IT</option>
-<option>B.Tech CE</option>
-<option>B.Tech CSE</option>
-<option>BCA</option>
-<option>MCA</option>
-</select>
-<br>
-<span id="courseError" class="error"></span>
-</td>
-</tr>
-<tr>
-<td><label for="year"><b>Year</b></label></td>
-<td>
-<select id="year">
-<option value="">Select Year</option>
-<option>1st Year</option>
-<option>2nd Year</option>
-<option>3rd Year</option>
-<option>4th Year</option>
-</select>
-<br>
-<span id="yearError" class="error"></span>
-</td>
-</tr>
-<tr>
-<td><label for="password"><b>Password</b></label></td>
-<td>
-<input
-type="password"
-id="password"
-placeholder="Enter Password"
-required>
-<br>
-<small id="passwordStrength"></small>
-<br>
-<span id="passwordError" class="error"></span>
-</td>
-</tr>
-<tr>
-<td><label for="confirmPassword"><b>Change Password</b></label></td>
-<td>
-<input
-type="password"
-id="confirmPassword"
-placeholder="Re-enter Password"
-required>
-<br>
-<span id="confirmPasswordError" class="error"></span>
-</td>
-</tr>
-<tr>
-<td><b>Phone Number</b></td>
-<td><input type="tel" id="phone" placeholder="Enter Phone Number">
-<br>
-<span id="phoneError" class="error"></span>
-</td>
-</tr>
-<tr>
-<td><b>Subject</b></td>
-<td>
-<select id="subject">
-<option value="">Select Subject</option>
-<option>Technical Issue</option>
-<option>Admission</option>
-<option>Fees</option>
-<option>Course</option>
-<option>Other</option>
-</select>
-<span id="subjectError" class="error"></span>
-</td>
-</tr>
-<tr>
-<td><b>Message</b></td>
-<td>
-<textarea rows="5"id="message" placeholder="Write your message here..."></textarea>
-<br>
-<span id="messageError" class="error"></span>
-</td>
-</tr>
-</table>
-</fieldset>
-</td>
-<tr>
-<td colspan="2">
-<input type="checkbox" id="terms">
-<label for="terms">I agree to the Terms and Conditions</label>
-<br>
-<span id="termsError" class="error"></span>
-</td>
-</tr>
-</table>
-<br>
-<center>
-<input type="submit" value="Register">
-<input type="reset" value="Clear">
-</center>
-</form>
-</section>
+                    <div class="form-group">
+                        <label for="name">Student Name</label>
+                        <input type="text" id="name"
+                               placeholder="Enter your name" required>
+                        <span id="nameError" class="error"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="enrollment">Enrollment ID</label>
+                        <input type="text" id="enrollment"
+                               placeholder="Enter Enrollment ID">
+                        <span id="enrollmentError" class="error"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email"
+                               placeholder="Enter email">
+                        <span id="emailError" class="error"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="age">Age</label>
+                        <input type="number" id="age" min="16" max="35"
+                               placeholder="Enter your age" required>
+                        <span id="ageError" class="error"></span>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <span class="field-label">Gender</span>
+                        <div class="radio-group">
+                            <label><input type="radio" id="male"
+                                name="gender" value="Male"> Male</label>
+                            <label><input type="radio" id="female"
+                                name="gender" value="Female"> Female</label>
+                            <label><input type="radio" id="other"
+                                name="gender" value="Other"> Other</label>
+                        </div>
+                        <span id="genderError" class="error"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="photo">Student Photo</label>
+                        <input type="file" id="photo" accept="image/*">
+                        <span id="photoError" class="error"></span>
+                    </div>
+
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Academic Information</legend>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="course">Course</label>
+                        <select id="course">
+                            <option value="">Select Course</option>
+                            <option>B.Tech IT</option>
+                            <option>B.Tech CE</option>
+                            <option>B.Tech CSE</option>
+                            <option>BCA</option>
+                            <option>MCA</option>
+                        </select>
+                        <span id="courseError" class="error"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="year">Year</label>
+                        <select id="year">
+                            <option value="">Select Year</option>
+                            <option>1st Year</option>
+                            <option>2nd Year</option>
+                            <option>3rd Year</option>
+                            <option>4th Year</option>
+                        </select>
+                        <span id="yearError" class="error"></span>
+                    </div>
+
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Account and Contact Details</legend>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password"
+                               placeholder="Enter password" required>
+                        <small id="passwordStrength"></small>
+                        <span id="passwordError" class="error"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input type="password" id="confirmPassword"
+                               placeholder="Re-enter password" required>
+                        <span id="confirmPasswordError" class="error"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone"
+                               placeholder="Enter phone number">
+                        <span id="phoneError" class="error"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject">
+                            <option value="">Select Subject</option>
+                            <option>Technical Issue</option>
+                            <option>Admission</option>
+                            <option>Fees</option>
+                            <option>Course</option>
+                            <option>Other</option>
+                        </select>
+                        <span id="subjectError" class="error"></span>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="5"
+                                  placeholder="Write your message here..."></textarea>
+                        <span id="messageError" class="error"></span>
+                    </div>
+
+                </div>
+            </fieldset>
+
+            <div class="terms-section">
+                <label for="terms">
+                    <input type="checkbox" id="terms">
+                    I agree to the Terms and Conditions
+                </label>
+                <span id="termsError" class="error"></span>
+            </div>
+
+            <div class="form-actions">
+                <input type="submit" value="Register" class="primary-btn">
+                <input type="reset" value="Clear" class="secondary-btn">
+            </div>
+
+        </form>
+    </section>
+
+    <section class="directory-card" aria-labelledby="studentsHeading">
+        <div class="section-heading">
+            <h2 id="studentsHeading">Student Directory</h2>
+            <p>Search, filter, and sort student records.</p>
+        </div>
+
+        <div class="directory-controls">
+
+            <div class="form-group">
+                <label for="students-search">Search Students</label>
+                <input type="search" id="students-search"
+                       placeholder="Search by name or department">
+            </div>
+
+            <div class="form-group">
+                <label for="students-filter">Department</label>
+                <select id="students-filter">
+                    <option value="">All Departments</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="students-sort">Sort By</label>
+                <select id="students-sort">
+                    <option value="name-asc">Name (A-Z)</option>
+                    <option value="name-desc">Name (Z-A)</option>
+                    <option value="gpa-asc">GPA (Low to High)</option>
+                    <option value="gpa-desc">GPA (High to Low)</option>
+                </select>
+            </div>
+
+        </div>
+
+        <p id="students-count" class="record-count">Loading students...</p>
+
+        <p id="students-message" class="directory-message"
+           role="status" aria-live="polite">
+            Loading students...
+        </p>
+
+        <div id="students-list" class="student-list"></div>
+
+        <div id="students-pagination" class="pagination"></div>
+    </section>
+
 </main>
-<hr>
-<footer>
-<center>
-<p>Student Hub Portal</p>
-</center>
+
+<footer class="profile-footer">
+    <p>&copy; 2026 StudentHub. All rights reserved.</p>
 </footer>
+
 <script src="script.js"></script>
+<script src="js/events.js"></script>
+<script type="module" src="js/profile.js"></script>
+
 </body>
 </html>

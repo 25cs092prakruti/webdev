@@ -3,6 +3,7 @@
 <head>
     <title>Notifications</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/profile.css">
 </head>
 
 <body>
@@ -41,101 +42,39 @@
 </nav>
 <main>
 
-<section>
 
-<fieldset>
+ <section class="panel">
+        <h2>College Events</h2>
 
-<legend><b>NOTIFICATION CENTER</b></legend>
+        <div class="controls">
+            <input id="events-search" type="search"
+                   placeholder="Search events" aria-label="Search events">
 
-<article>
+            <select id="events-filter" aria-label="Filter by event category">
+                <option value="">All Categories</option>
+            </select>
 
-<table border="1" width="100%" cellpadding="12">
+            <select id="events-sort" aria-label="Sort events">
+                <option value="title-asc">Title: A to Z</option>
+                <option value="title-desc">Title: Z to A</option>
+                <option value="date-asc">Date: Earliest First</option>
+                <option value="date-desc">Date: Latest First</option>
+            </select>
+        </div>
 
-<tr>
-<th>UPCOMING EVENTS</th>
-<th>UPCOMING HACKATHONS</th>
-</tr>
+        <p id="events-count"></p>
+        <p id="events-message" class="message" aria-live="polite">
+            Loading events...
+        </p>
+        <div id="events-list" class="record-list"></div>
+        <div id="events-pagination" class="pagination"></div>
+    </section>
 
-<tr>
-
-<td>
-
-<fieldset>
-
-<legend><b>Event 1</b></legend>
-
-<b>Topic :</b> AI Seminar<br><br>
-
-<b>Place :</b> Seminar Hall<br><br>
-
-<b>Time :</b> 10:00 AM
-
-</fieldset>
-
-<br>
-
-<fieldset>
-
-<legend><b>Event 2</b></legend>
-
-<b>Topic :</b> Web Workshop<br><br>
-
-<b>Place :</b> Lab 3<br><br>
-
-<b>Time :</b> 2:00 PM
-
-</fieldset>
-
-</td>
-
-<td>
-
-<fieldset>
-
-<legend><b>Hackathon 1</b></legend>
-
-<b>Topic :</b> Code Sprint<br><br>
-
-<b>Place :</b> Auditorium<br><br>
-
-<b>Time :</b> 9:00 AM
-
-</fieldset>
-
-<br>
-
-<fieldset>
-
-<legend><b>Hackathon 2</b></legend>
-
-<b>Topic :</b> App Challenge<br><br>
-
-<b>Place :</b> Innovation Lab<br><br>
-
-<b>Time :</b> 11:30 AM
-
-</fieldset>
-
-</td>
-
-</tr>
-
-</table>
-
-</article>
-
-</fieldset>
-
-</section>
-
-</main>
-
-<footer>
-<center>
-<p> Student Hub Portal</p>
-</center>
-</footer>
 <script src="script.js"></script>
+<script src="js/events.js"></script>
+
+
+<script type="module" src="js/profile.js"></script>
 </body>
 
 </html>

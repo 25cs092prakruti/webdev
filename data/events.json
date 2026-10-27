@@ -1,0 +1,108 @@
+
+[
+  {
+    "id": 1,
+    "title": "Web Development Workshop",
+    "category": "Workshop",
+    "date": "2026-11-05",
+    "venue": "Computer Lab 1"
+  },
+  {
+    "id": 2,
+    "title": "AI Innovation Talk",
+    "category": "Seminar",
+    "date": "2026-11-08",
+    "venue": "Seminar Hall"
+  },
+  {
+    "id": 3,
+    "title": "Coding Contest",
+    "category": "Competition",
+    "date": "2026-11-12",
+    "venue": "Block A"
+  },
+  {
+    "id": 4,
+    "title": "IoT Project Expo",
+    "category": "Exhibition",
+    "date": "2026-11-15",
+    "venue": "Innovation Centre"
+  },
+  {
+    "id": 5,
+    "title": "Cyber Security Basics",
+    "category": "Workshop",
+    "date": "2026-11-18",
+    "venue": "Computer Lab 2"
+  },
+  {
+    "id": 6,
+    "title": "Annual Sports Meet",
+    "category": "Sports",
+    "date": "2026-11-20",
+    "venue": "Sports Ground"
+  },
+  {
+    "id": 7,
+    "title": "Resume Building Session",
+    "category": "Seminar",
+    "date": "2026-11-22",
+    "venue": "Seminar Hall"
+  },
+  {
+    "id": 8,
+    "title": "Hackathon 2026",
+    "category": "Competition",
+    "date": "2026-11-25",
+    "venue": "Innovation Centre"
+  },
+  {
+    "id": 9,
+    "title": "Robotics Demonstration",
+    "category": "Exhibition",
+    "date": "2026-11-27",
+    "venue": "Electronics Lab"
+  },
+  {
+    "id": 10,
+    "title": "Cloud Computing Workshop",
+    "category": "Workshop",
+    "date": "2026-12-02",
+    "venue": "Computer Lab 1"
+  },
+  {
+    "id": 11,
+    "title": "Green Campus Drive",
+    "category": "Community",
+    "date": "2026-12-04",
+    "venue": "Main Campus"
+  },
+  {
+    "id": 12,
+    "title": "Data Structures Quiz",
+    "category": "Competition",
+    "date": "2026-12-07",
+    "venue": "Room 204"
+  },
+  {
+    "id": 13,
+    "title": "Entrepreneurship Meetup",
+    "category": "Seminar",
+    "date": "2026-12-10",
+    "venue": "Auditorium"
+  },
+  {
+    "id": 14,
+    "title": "Cultural Fest",
+    "category": "Cultural",
+    "date": "2026-12-14",
+    "venue": "Main Stage"
+  },
+  {
+    "id": 15,
+    "title": "Project Presentation Day",
+    "category": "Exhibition",
+    "date": "2026-12-18",
+    "venue": "Project Hall"
+  }
+]

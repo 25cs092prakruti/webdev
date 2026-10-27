@@ -1,0 +1,93 @@
+
+[
+  {
+    "id": 1,
+    "question": "How do I register on StudentHub?",
+    "answer": "Open the Register page and complete all required fields.",
+    "category": "Account"
+  },
+  {
+    "id": 2,
+    "question": "How can I reset my password?",
+    "answer": "Use the password reset option on the Login page.",
+    "category": "Account"
+  },
+  {
+    "id": 3,
+    "question": "Where can I view my profile?",
+    "answer": "Open Profile from the main navigation menu.",
+    "category": "Profile"
+  },
+  {
+    "id": 4,
+    "question": "How do I update my details?",
+    "answer": "Edit the available fields on your Profile page.",
+    "category": "Profile"
+  },
+  {
+    "id": 5,
+    "question": "Where can I view college events?",
+    "answer": "Open the Events page to see upcoming activities.",
+    "category": "Events"
+  },
+  {
+    "id": 6,
+    "question": "Can I search for students?",
+    "answer": "Use the search box in the Student Directory.",
+    "category": "Directory"
+  },
+  {
+    "id": 7,
+    "question": "How do I filter students by department?",
+    "answer": "Choose a department from the filter dropdown.",
+    "category": "Directory"
+  },
+  {
+    "id": 8,
+    "question": "How can I sort student records?",
+    "answer": "Select a sorting option from the dropdown.",
+    "category": "Directory"
+  },
+  {
+    "id": 9,
+    "question": "What does Active mean?",
+    "answer": "It indicates that the student record is marked active.",
+    "category": "Directory"
+  },
+  {
+    "id": 10,
+    "question": "What is GPA?",
+    "answer": "GPA is the grade-point average shown for a student.",
+    "category": "Academics"
+  },
+  {
+    "id": 11,
+    "question": "How do I register for an event?",
+    "answer": "Open the event details and follow the registration instructions.",
+    "category": "Events"
+  },
+  {
+    "id": 12,
+    "question": "Where can I get technical help?",
+    "answer": "Use the Contact page to reach the support team.",
+    "category": "Support"
+  },
+  {
+    "id": 13,
+    "question": "Why is my data not loading?",
+    "answer": "Check your JSON file paths and run the page using Live Server.",
+    "category": "Technical"
+  },
+  {
+    "id": 14,
+    "question": "Does student search ignore letter case?",
+    "answer": "Yes, search can be configured to ignore letter case.",
+    "category": "Directory"
+  },
+  {
+    "id": 15,
+    "question": "How do I move between pages of results?",
+    "answer": "Use the Previous and Next buttons below the records.",
+    "category": "Directory"
+  }
+]
