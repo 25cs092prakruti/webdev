@@ -362,6 +362,13 @@ nav a:hover{
     color:white;
 }
 
+.event-poster-thumb{
+    width:96px;
+    height:64px;
+    object-fit:cover;
+    border-radius:5px;
+}
+
 .registration-card a:hover{
     color:#003366;
     text-decoration:underline;

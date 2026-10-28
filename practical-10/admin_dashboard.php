@@ -52,9 +52,14 @@ try {
             <a href="manage_students.php">Manage students</a>
         </div>
         <div class="dashboard-box">
-            <h3>Practical 11 CRUD</h3>
+            <h3>CRUD</h3>
             <p>Search, filter, edit, soft-delete, and export student records.</p>
             <a href="../practical-11/student_management.php">Open student management</a>
+        </div>
+        <div class="dashboard-box">
+            <h3>Events</h3>
+            <p>Add, edit, delete, and upload validated event posters.</p>
+            <a href="../practical-12/event_management.php">Open event management</a>
         </div>
         <div class="dashboard-box">
             <h3>Attendance</h3>

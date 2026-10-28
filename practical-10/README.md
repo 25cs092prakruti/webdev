@@ -24,6 +24,10 @@ UPDATE user_accounts SET role = 'admin' WHERE username = 'your_admin_username';
 
 Administrators sign in with their own account and are sent to the administrator dashboard. From there they can add/remove student accounts, record attendance, manage the timetable, and approve or reject leave requests. Every administration page checks the `admin` role on the server. Student accounts are restricted to the student dashboard, profile, and student services; they cannot open administration pages.
 
+Practical 12 event management is available from the administrator dashboard after importing
+`../practical-12/schema.sql`. It supports event CRUD, category/status filters, and validated
+JPG, PNG, GIF, or WEBP poster uploads up to 2 MB.
+
 ## Security behavior
 
 - Passwords are checked with `password_verify()`, and the session ID is regenerated on login.
