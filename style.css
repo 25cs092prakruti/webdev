@@ -310,6 +310,58 @@ nav a:hover{
     min-width:720px;
 }
 
+.student-filters{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr auto auto;
+    align-items:end;
+    gap:12px;
+    padding:16px 0;
+    background:transparent;
+}
+
+.student-filters label{
+    margin:0;
+}
+
+.student-filters input,
+.student-filters select{
+    margin:6px 0 0;
+}
+
+.student-filters button,
+.inline-form button{
+    padding:10px 14px;
+    border:0;
+    border-radius:5px;
+    background:#0055aa;
+    color:white;
+    cursor:pointer;
+}
+
+.inline-form{
+    display:inline;
+    margin:0;
+    padding:0;
+    background:transparent;
+}
+
+.inline-form button{
+    margin-left:8px;
+}
+
+.pagination a{
+    display:inline-block;
+    margin:12px 4px 0 0;
+    padding:8px 12px;
+    border-radius:4px;
+    background:#e5f0ff;
+}
+
+.pagination a[aria-current="page"]{
+    background:#0055aa;
+    color:white;
+}
+
 .registration-card a:hover{
     color:#003366;
     text-decoration:underline;

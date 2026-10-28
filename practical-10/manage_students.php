@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             if ($fullName === '' || !preg_match('/\A[a-z0-9_]{3,30}\z/', $username) ||
                 !filter_var($email, FILTER_VALIDATE_EMAIL) || strlen($password) < 8) {
-                $error = 'Enter a name, valid username/email, and a password of at least 8 characters.';
+                $error = 'Enter a name, a username with only letters, numbers, or underscores, a valid email, and a password of at least 8 characters.';
             } else {
                 $passwordHash = password_hash($password, PASSWORD_DEFAULT);
                 $statement = $mysqli->prepare(
@@ -98,8 +98,18 @@ try {
             <input type="hidden" name="csrf_token" value="<?= appEscape($_SESSION['csrf_token']) ?>">
             <input type="hidden" name="action" value="add">
             <label for="full_name">Full name</label><input id="full_name" name="full_name" required maxlength="100">
-            <label for="username">Username</label><input id="username" name="username" required pattern="[a-zA-Z0-9_]{3,30}" maxlength="30">
-            <label for="email">Email</label><input id="email" name="email" type="email" required maxlength="254">
+            <label for="username">Username</label>
+            <input id="username" name="username" required pattern="[a-zA-Z0-9_]{3,30}" maxlength="30"
+                   autocomplete="username" autocapitalize="none"
+                   aria-describedby="usernameHint"
+                   title="Use 3–30 letters, numbers, or underscores only."
+                   placeholder="for example, devangi_bharaya"
+                   oninvalid="this.setCustomValidity('Use 3–30 letters, numbers, or underscores only. Do not enter an email address.')"
+                   oninput="this.setCustomValidity('')">
+            <small id="usernameHint">Use 3–30 letters, numbers, or underscores only. Do not enter an email address.</small>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required maxlength="254"
+                   autocomplete="email" placeholder="student@example.com">
             <label for="password">Temporary password</label><input id="password" name="password" type="password" required minlength="8" maxlength="72">
             <button type="submit" class="registration-submit">Add student</button>
         </form>
