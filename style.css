@@ -46,6 +46,275 @@ nav a:hover{
     background:#003366;
 }
 
+.portal-nav{
+    justify-content:center;
+    gap:2px;
+}
+
+.portal-nav a{
+    text-align:center;
+}
+
+.portal-nav a[aria-current="page"]{
+    background:#003366;
+    font-weight:bold;
+}
+
+.portal-logout{
+    display:flex;
+    align-items:center;
+    margin:0;
+    padding:0;
+    background:transparent;
+    border-radius:0;
+}
+
+.portal-logout button{
+    padding:12px 15px;
+    border:0;
+    background:transparent;
+    color:white;
+    font:inherit;
+    cursor:pointer;
+}
+
+.portal-logout button:hover{
+    background:#003366;
+}
+
+.account-main{
+    display:flex;
+    justify-content:center;
+    padding:40px 16px;
+}
+
+.account-card{
+    width:min(100%, 720px);
+    padding:32px;
+    border:1px solid #d5deea;
+    border-radius:14px;
+    background:white;
+    box-shadow:0 12px 32px #00336614;
+}
+
+.account-avatar{
+    display:grid;
+    width:64px;
+    height:64px;
+    margin-bottom:18px;
+    place-items:center;
+    border-radius:50%;
+    background:#e5f0ff;
+    color:#003366;
+    font-size:28px;
+    font-weight:bold;
+}
+
+.account-eyebrow{
+    margin-bottom:6px;
+    color:#0055aa;
+    font-size:12px;
+    font-weight:bold;
+    letter-spacing:1.2px;
+}
+
+.account-card h2{
+    margin-bottom:6px;
+    color:#003366;
+}
+
+.account-description{
+    margin-bottom:24px;
+    color:#52637c;
+}
+
+.account-details{
+    margin:0;
+    border-top:1px solid #d5deea;
+}
+
+.account-details div{
+    display:grid;
+    grid-template-columns:minmax(130px, 1fr) 2fr;
+    gap:16px;
+    padding:14px 0;
+    border-bottom:1px solid #d5deea;
+}
+
+.account-details dt{
+    color:#52637c;
+    font-weight:bold;
+}
+
+.account-details dd{
+    margin:0;
+    overflow-wrap:anywhere;
+}
+
+.account-dashboard-link{
+    display:inline-block;
+    margin-top:24px;
+    padding:11px 16px;
+    border-radius:6px;
+    background:#0055aa;
+    color:white;
+}
+
+.account-dashboard-link:hover{
+    background:#003366;
+    color:white;
+}
+
+.dashboard-welcome{
+    margin-bottom:18px;
+    text-align:center;
+}
+
+.registration-main{
+    display:flex;
+    justify-content:center;
+    padding:40px 16px;
+}
+
+.registration-card{
+    width:min(100%, 520px);
+    padding:32px;
+    border:1px solid #d5deea;
+    border-radius:14px;
+    background:white;
+    box-shadow:0 12px 32px #00336614;
+}
+
+.registration-card h2{
+    margin-bottom:8px;
+    color:#003366;
+}
+
+.registration-eyebrow{
+    margin-bottom:8px;
+    color:#0055aa;
+    font-size:12px;
+    font-weight:bold;
+    letter-spacing:1.2px;
+}
+
+.registration-intro{
+    margin-bottom:20px;
+    color:#52637c;
+}
+
+.registration-card label{
+    display:block;
+    margin-top:14px;
+    font-weight:bold;
+}
+
+.registration-card input{
+    margin:6px 0 0;
+}
+
+.registration-card .remember-label{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-top:18px;
+    font-weight:normal;
+}
+
+.registration-card .remember-label input{
+    flex:0 0 auto;
+    width:auto;
+    margin:0;
+}
+
+.registration-card small{
+    display:block;
+    margin-top:6px;
+    color:#52637c;
+}
+
+.registration-submit{
+    width:100%;
+    margin-top:22px;
+    padding:12px;
+    border:0;
+    border-radius:6px;
+    background:#0055aa;
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.registration-submit:hover{
+    background:#003366;
+}
+
+.form-message{
+    padding:12px 16px;
+    border-radius:6px;
+}
+
+.form-message p{
+    margin-bottom:6px;
+}
+
+.form-message ul{
+    margin:6px 0 0;
+    padding-left:20px;
+}
+
+.success-message{
+    background:#e4f7eb;
+    color:#14532d;
+}
+
+.error-message{
+    background:#fff0f0;
+    color:#9b1c1c;
+}
+
+.registration-signin{
+    margin-top:18px;
+    text-align:center;
+}
+
+.role-dashboard{
+    width:min(1200px, 94%);
+    margin:32px auto;
+}
+
+.role-welcome{
+    margin-bottom:24px;
+    padding:24px;
+    border-radius:12px;
+    background:white;
+    box-shadow:0 5px 20px #142d5014;
+}
+
+.role-welcome h2{
+    margin-bottom:8px;
+    color:#003366;
+}
+
+.admin-users{
+    width:100%;
+    margin:24px auto;
+}
+
+.table-responsive{
+    overflow-x:auto;
+}
+
+.table-responsive table{
+    min-width:720px;
+}
+
+.registration-card a:hover{
+    color:#003366;
+    text-decoration:underline;
+}
+
 /* ===========================
    MAIN
 =========================== */
@@ -442,6 +711,73 @@ body.dark-mode .modal-content{
     color:white;
 }
 
+body.dark-mode .registration-card{
+    background:#2d3748;
+    border-color:#555;
+}
+
+body.dark-mode .account-card{
+    background:#2d3748;
+    border-color:#555;
+}
+
+body.dark-mode .portal-logout{
+    background:transparent;
+}
+
+body.dark-mode .portal-logout button{
+    color:white;
+}
+
+body.dark-mode .role-welcome{
+    background:#2d3748;
+    color:white;
+}
+
+body.dark-mode .role-welcome h2{
+    color:#9ccaff;
+}
+
+body.dark-mode .account-card h2,
+body.dark-mode .account-eyebrow{
+    color:#9ccaff;
+}
+
+body.dark-mode .account-description,
+body.dark-mode .account-details dt{
+    color:#d1d5db;
+}
+
+body.dark-mode .account-details,
+body.dark-mode .account-details div{
+    border-color:#555;
+}
+
+body.dark-mode .account-avatar{
+    background:#1f2937;
+    color:#9ccaff;
+}
+
+body.dark-mode .registration-card h2,
+body.dark-mode .registration-eyebrow{
+    color:#9ccaff;
+}
+
+body.dark-mode .registration-intro,
+body.dark-mode .registration-card small{
+    color:#d1d5db;
+}
+
+body.dark-mode .success-message{
+    background:#16452a;
+    color:#dcfce7;
+}
+
+body.dark-mode .error-message{
+    background:#5a2525;
+    color:#fee2e2;
+}
+
 /* Slider */
 body.dark-mode .slider{
     background:#1f2937;
@@ -511,6 +847,30 @@ body.dark-mode .slider{
 
 #navMenu a:hover{
     background:#003366;
+}
+
+@media screen and (max-width: 700px){
+    .portal-nav{
+        justify-content:flex-start;
+    }
+
+    .portal-nav a{
+        flex:1 1 32%;
+        padding:12px 8px;
+    }
+
+    .registration-card{
+        padding:24px 18px;
+    }
+
+    .account-card{
+        padding:24px 18px;
+    }
+
+    .account-details div{
+        grid-template-columns:1fr;
+        gap:4px;
+    }
 }
 /* Notification Banner */
 
