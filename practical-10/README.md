@@ -4,7 +4,7 @@
 
 1. Start Apache and MySQL in XAMPP.
 2. Register the Practical 9 database first by importing `../practical-9/schema.sql` if it is not already set up.
-3. In phpMyAdmin, select `studenthub_db` and import `user_registration.sql` **once**. This adds roles, last-login timestamps, and remember-token storage, and seeds two demonstration accounts.
+3. In phpMyAdmin, select `studenthub_db` and import `user_registration.sql`. This adds roles, last-login timestamps, remember-token storage, and the administration tables, and seeds two demonstration accounts. If the file was already imported, run it again after updating the project so the new tables are created.
 4. Open `http://localhost/webdev/practical-10/login.php` or the portal's
    `http://localhost/webdev/login.html` shortcut.
 
@@ -21,6 +21,8 @@ New Practical 9 registrations receive the `student` role by default. To grant an
 ```sql
 UPDATE user_accounts SET role = 'admin' WHERE username = 'your_admin_username';
 ```
+
+Administrators sign in with their own account and are sent to the administrator dashboard. From there they can add/remove student accounts, record attendance, manage the timetable, and approve or reject leave requests. Every administration page checks the `admin` role on the server. Student accounts are restricted to the student dashboard, profile, and student services; they cannot open administration pages.
 
 ## Security behavior
 

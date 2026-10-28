@@ -43,7 +43,7 @@ appRequireRole('student');
         <div class="dashboard-box"><h3>Results</h3><p>SGPA and attendance</p><a href="../result.html">Open</a></div>
         <div class="dashboard-box"><h3>Fees</h3><p>Fees and scholarship details</p><a href="../fees.html">Open</a></div>
         <div class="dashboard-box"><h3>Certificates</h3><p>Manage certificates</p><a href="../certificates.html">Open</a></div>
-        <div class="dashboard-box"><h3>Leave</h3><p>Apply for leave</p><a href="../leave.html">Open</a></div>
+        <div class="dashboard-box"><h3>Leave</h3><p>Apply for leave</p><a href="leave.php">Open</a></div>
         <div class="dashboard-box"><h3>Notifications</h3><p>Latest updates</p><a href="../notifications.html">Open</a></div>
         <div class="dashboard-box"><h3>Contact</h3><p>Contact Student Hub</p><a href="../contactus.html">Open</a></div>
     </div>

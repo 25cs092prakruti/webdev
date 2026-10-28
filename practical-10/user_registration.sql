@@ -39,6 +39,47 @@ CREATE TABLE IF NOT EXISTS p10_remember_tokens (
         ON DELETE CASCADE
 ) ENGINE=InnoDB;
 
+CREATE TABLE IF NOT EXISTS p10_attendance (
+    attendance_id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    student_id INT UNSIGNED NOT NULL,
+    attendance_date DATE NOT NULL,
+    status ENUM('present', 'absent') NOT NULL,
+    marked_by INT UNSIGNED NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    UNIQUE KEY uq_p10_attendance_student_date (student_id, attendance_date),
+    CONSTRAINT fk_p10_attendance_student FOREIGN KEY (student_id)
+        REFERENCES user_accounts (user_id) ON DELETE CASCADE,
+    CONSTRAINT fk_p10_attendance_admin FOREIGN KEY (marked_by)
+        REFERENCES user_accounts (user_id) ON DELETE RESTRICT
+) ENGINE=InnoDB;
+
+CREATE TABLE IF NOT EXISTS p10_timetable (
+    timetable_id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    day_of_week ENUM('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday') NOT NULL,
+    subject VARCHAR(100) NOT NULL,
+    start_time TIME NOT NULL,
+    end_time TIME NOT NULL,
+    room VARCHAR(50) NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB;
+
+CREATE TABLE IF NOT EXISTS p10_leave_requests (
+    leave_id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    student_id INT UNSIGNED NOT NULL,
+    leave_type VARCHAR(40) NOT NULL,
+    start_date DATE NOT NULL,
+    end_date DATE NOT NULL,
+    reason VARCHAR(1000) NOT NULL,
+    status ENUM('pending', 'approved', 'rejected') NOT NULL DEFAULT 'pending',
+    reviewed_by INT UNSIGNED NULL,
+    reviewed_at DATETIME NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    CONSTRAINT fk_p10_leave_student FOREIGN KEY (student_id)
+        REFERENCES user_accounts (user_id) ON DELETE CASCADE,
+    CONSTRAINT fk_p10_leave_admin FOREIGN KEY (reviewed_by)
+        REFERENCES user_accounts (user_id) ON DELETE SET NULL
+) ENGINE=InnoDB;
+
 INSERT IGNORE INTO user_accounts
     (full_name, username, email, password_hash, role)
 VALUES

@@ -1,5 +1,5 @@
 <?php
-const SESSION_IDLE_TIMEOUT = 900;
+const SESSION_IDLE_TIMEOUT = 20 ;
 const REMEMBER_COOKIE_NAME = 'studenthub_remember';
 const REMEMBER_COOKIE_LIFETIME = 2592000;
 

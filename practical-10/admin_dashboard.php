@@ -42,7 +42,30 @@ try {
     <section class="role-welcome">
         <p class="registration-eyebrow">ADMINISTRATOR ACCOUNT</p>
         <h2>Welcome, <?= appEscape($_SESSION['full_name']) ?></h2>
-        <p>This protected page is available only to administrator accounts.</p>
+        <p>This protected control panel is available only to administrator accounts.</p>
+    </section>
+
+    <section class="dashboard" aria-label="Administration tools">
+        <div class="dashboard-box">
+            <h3>Add or remove students</h3>
+            <p>Create student credentials or remove a student account.</p>
+            <a href="manage_students.php">Manage students</a>
+        </div>
+        <div class="dashboard-box">
+            <h3>Attendance</h3>
+            <p>Record and review daily student attendance.</p>
+            <a href="attendance.php">Manage attendance</a>
+        </div>
+        <div class="dashboard-box">
+            <h3>Time table</h3>
+            <p>Create and remove the student timetable.</p>
+            <a href="timetable.php">Manage timetable</a>
+        </div>
+        <div class="dashboard-box">
+            <h3>Approve leave</h3>
+            <p>Review and approve or reject student leave requests.</p>
+            <a href="approve_leave.php">Review leave</a>
+        </div>
     </section>
 
     <section class="account-card admin-users" aria-labelledby="usersHeading">

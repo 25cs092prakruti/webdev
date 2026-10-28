@@ -33,31 +33,41 @@ function escapeHtml($value)
 {
     return htmlspecialchars((string)$value, ENT_QUOTES, 'UTF-8');
 }
+
+$isAdmin = $_SESSION['role'] === 'admin';
+$profileTitle = $isAdmin ? 'My Admin Profile' : 'My Student Profile';
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Profile | Student Hub</title>
+    <title><?= escapeHtml($profileTitle) ?> | Student Hub</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header class="header">
-    <h1>My Student Profile</h1>
+    <h1><?= escapeHtml($profileTitle) ?></h1>
     <button type="button" id="themeBtn" class="theme-btn">🌙 Dark Mode</button>
 </header>
 
 <nav class="portal-nav" aria-label="Main navigation">
     <a href="practical-10/dashboard.php">Dashboard</a>
     <a href="profile.php" aria-current="page">My Profile</a>
-    <a href="courses.html">Courses</a>
-    <a href="result.html">Results</a>
-    <a href="fees.html">Fees</a>
-    <a href="certificates.html">Certificates</a>
-    <a href="leave.html">Leave</a>
-    <a href="notifications.html">Notifications</a>
-    <a href="contactus.html">Contact</a>
+    <?php if (!$isAdmin): ?>
+        <a href="courses.html">Courses</a>
+        <a href="result.html">Results</a>
+        <a href="fees.html">Fees</a>
+        <a href="certificates.html">Certificates</a>
+        <a href="leave.html">Leave</a>
+        <a href="notifications.html">Notifications</a>
+        <a href="contactus.html">Contact</a>
+    <?php else: ?>
+        <a href="practical-10/manage_students.php">Students</a>
+        <a href="practical-10/attendance.php">Attendance</a>
+        <a href="practical-10/timetable.php">Timetable</a>
+        <a href="practical-10/approve_leave.php">Approve leave</a>
+    <?php endif; ?>
     <form class="portal-logout" action="practical-10/logout.php" method="post">
         <input type="hidden" name="csrf_token" value="<?= appEscape($_SESSION['csrf_token']) ?>">
         <button type="submit">Sign out</button>
@@ -71,7 +81,9 @@ function escapeHtml($value)
         </div>
         <p class="account-eyebrow">SIGNED-IN ACCOUNT</p>
         <h2 id="accountHeading"><?= escapeHtml($fullName) ?></h2>
-        <p class="account-description">Your profile details associated with this Student Hub account.</p>
+        <p class="account-description">
+            Your <?= $isAdmin ? 'administrator' : 'student' ?> account details and access level.
+        </p>
 
         <dl class="account-details">
             <div>
