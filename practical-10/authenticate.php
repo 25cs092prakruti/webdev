@@ -14,7 +14,6 @@ if (!appVerifyCsrfToken($_POST['csrf_token'] ?? null)) {
 
 $identifier = strtolower(trim((string)($_POST['identifier'] ?? '')));
 $password = (string)($_POST['password'] ?? '');
-
 if ($identifier === '' || $password === '') {
     header('Location: login.php?status=invalid');
     exit;
